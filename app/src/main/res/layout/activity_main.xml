@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app   ="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 1) Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Envanter"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"/>
+
+    <!-- 2) RecyclerView’i Toolbar’ın altına inecek şekilde yerleştiriyoruz -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="16dp" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Ürün Ekle"
+        android:src="@drawable/ic_add"
+        app:layout_anchor="@id/rvProducts"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_margin="16dp"/>
+
+    <!-- Barkod Tara FAB (sol alt) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Barkodu Tara"
+        android:src="@drawable/ic_qr_code_scanner"
+        app:layout_anchor="@id/rvProducts"
+        app:layout_anchorGravity="bottom|start"
+        android:layout_margin="16dp"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

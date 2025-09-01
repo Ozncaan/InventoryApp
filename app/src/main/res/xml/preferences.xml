@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="low_stock_threshold"
+        android:title="Düşük Stok Eşiği"
+        android:dialogTitle="Stok Eşiğini Girin"
+        android:defaultValue="5"
+        android:inputType="number"
+        android:summary="%s üründen az ise uyarı göster"/>
+</PreferenceScreen>
